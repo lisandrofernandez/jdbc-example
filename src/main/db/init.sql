@@ -26,7 +26,7 @@ CREATE TABLE product (
     sku VARCHAR(256),
     name VARCHAR(256),
     price DECIMAL(20, 2),
-    UNIQUE KEY UNIQUET_PRODUCT_SKU (sku)
+    UNIQUE KEY UNIQUE_PRODUCT_SKU (sku)
 );
 
 CREATE TABLE customer (
