@@ -45,18 +45,15 @@ public class App {
             conn = getConnection();
             printData();
             insertData();
-            System.out.println("");
+            System.out.println();
             printData();
-        } catch (Exception e) {
-            throw e;
         } finally {
-            if (conn != null)
-                try { conn.close(); } catch (Exception e) {}
+            if (conn != null) conn.close();
         }
     }
 
     private static Connection getConnection() throws SQLException {
-        conn =  DriverManager.getConnection(URL, USER, PASSWORD);
+        conn = DriverManager.getConnection(URL, USER, PASSWORD);
         conn.setAutoCommit(false);
         return conn;
     }
@@ -68,7 +65,7 @@ public class App {
         ) {
             System.out.println("[product]");
             while(rs.next()) {
-                Long id  = rs.getLong("id");
+                long id  = rs.getLong("id");
                 String name  = rs.getString("name");
                 String sku  = rs.getString("sku");
                 BigDecimal price  = rs.getBigDecimal("price");
@@ -81,9 +78,9 @@ public class App {
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate("INSERT INTO product (sku, name, price) VALUES ('les-paul', 'Guitar Gibson Les Paul', 2495.39)");
             conn.commit();
-        } catch (Exception e1) {
-            try { conn.rollback(); } catch (Exception e2) {}
-            throw e1;
+        } catch (Exception e) {
+            conn.rollback();
+            throw e;
         }
     }
 
