@@ -7,7 +7,7 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
  *
@@ -90,10 +90,10 @@ INSERT INTO purchase_order (id, customer_id, order_date) VALUES (1, 2, '2018-01-
 INSERT INTO purchase_order (id, customer_id, order_date) VALUES (2, 1, '2018-02-13');
 INSERT INTO purchase_order (id, customer_id, order_date) VALUES (3, 2, '2018-02-25');
 
-INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (1, 1, 1, 10, 7.99);
+INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (1, 1, 1, 10, 79.90);
 INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (2, 1, 2, 2, 703.92);
 INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (3, 1, 3, 7, 24.99);
 INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (4, 2, 4, 2, 262.00);
 INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (5, 2, 5, 15, 15000.00);
 INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (6, 3, 1, 7, 55.93);
-INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (7, 3, 5, 18, 18.00);
+INSERT INTO item (id, order_id, product_id, quantity, total) VALUES (7, 3, 6, 18, 18.00);
